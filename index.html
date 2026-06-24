@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cyber Arena Championship 2026</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="noise"></div>
+    <div class="cursor-glow" aria-hidden="true"></div>
+
+    <header class="hero" id="top">
+        <nav class="nav">
+            <a class="brand" href="#top" aria-label="Cyber Arena">
+                <span class="brand-mark"></span>
+                Cyber Arena
+            </a>
+            <div class="nav-links" aria-label="Навигация">
+                <a href="#games">Дисциплины</a>
+                <a href="#scenes">Сцены</a>
+                <a href="#prizes">Призы</a>
+                <a href="#schedule">Расписание</a>
+                <a href="#form">Заявка</a>
+            </div>
+        </nav>
+
+        <div class="hero-orbit" aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <section class="hero-content">
+            <p class="eyebrow">LAN + Online • Москва • 18-20 сентября</p>
+            <h1>Cyber Arena Championship 2026</h1>
+            <p class="lead">
+                Большой киберспортивный турнир для команд и соло-игроков:
+                яркая сцена, трансляции, шоу-матчи и призовой фонд 2 000 000 ₽.
+            </p>
+
+            <div class="hero-actions">
+                <button class="btn primary" type="button" onclick="scrollToForm()">Подать заявку</button>
+                <a class="btn secondary" href="#schedule">Смотреть расписание</a>
+            </div>
+
+            <div class="countdown" aria-label="Обратный отсчет до турнира">
+                <div><strong id="days">00</strong><span>дней</span></div>
+                <div><strong id="hours">00</strong><span>часов</span></div>
+                <div><strong id="minutes">00</strong><span>минут</span></div>
+                <div><strong id="seconds">00</strong><span>секунд</span></div>
+            </div>
+        </section>
+
+        <div class="hero-stats">
+            <div><b>128</b><span>команд</span></div>
+            <div><b>4</b><span>дисциплины</span></div>
+            <div><b>2M ₽</b><span>призовой фонд</span></div>
+        </div>
+    </header>
+
+    <main>
+        <section class="section intro section-bg reveal" style="--section-image: url('assets/about-bg.jpg')">
+            <div class="section-title">
+                <p class="eyebrow">Формат турнира</p>
+                <h2>Соревнование, которое выглядит как финал сезона</h2>
+            </div>
+            <p>
+                Отборочные проходят онлайн, лучшие команды выходят на офлайн-арену.
+                Финальный уикенд объединит матчевые зоны, аналитику, фан-встречи,
+                косплей-сцену и прямые трансляции с профессиональным продакшеном.
+            </p>
+        </section>
+
+        <section class="section section-bg games-section" id="games"
+            style="--section-image: url('assets/games-bg.jpg')">
+            <div class="section-title reveal">
+                <p class="eyebrow">Боевые дисциплины</p>
+                <h2>Выбирай игру и собирай состав</h2>
+            </div>
+
+            <div class="game-grid">
+                <article class="game-card reveal">
+                    <div class="game-scene cs-scene" aria-hidden="true">
+                        <span class="crosshair"></span>
+                        <span class="bullet-line"></span>
+                        <span class="target-dot"></span>
+                    </div>
+                    <span class="game-tag">FPS 5v5</span>
+                    <h3>CS2</h3>
+                    <p>Тактика, пики, ретейки и решающие клатчи на главной сцене.</p>
+                </article>
+                <article class="game-card reveal">
+                    <div class="game-scene dota-scene" aria-hidden="true">
+                        <span class="rune-orb"></span>
+                        <span class="rune-ring"></span>
+                        <span class="spark spark-a"></span>
+                        <span class="spark spark-b"></span>
+                    </div>
+                    <span class="game-tag">MOBA</span>
+                    <h3>Dota 2</h3>
+                    <p>Драфты, камбэки и командные файты до последнего трона.</p>
+                </article>
+                <article class="game-card reveal">
+                    <div class="game-scene fc-scene" aria-hidden="true">
+                        <span class="pitch-line"></span>
+                        <span class="ball"></span>
+                        <span class="goal-flash"></span>
+                    </div>
+                    <span class="game-tag">Football</span>
+                    <h3>FC 24</h3>
+                    <p>Скоростные дуэли, плей-офф сетка и финал на большом экране.</p>
+                </article>
+                <article class="game-card reveal">
+                    <div class="game-scene ufc-scene" aria-hidden="true">
+                        <span class="impact-core"></span>
+                        <span class="impact-line line-a"></span>
+                        <span class="impact-line line-b"></span>
+                        <span class="impact-line line-c"></span>
+                    </div>
+                    <span class="game-tag">Fighting</span>
+                    <h3>UFC 5</h3>
+                    <p>Один на один: реакция, тайминг и чемпионский характер.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="section scene-showcase section-bg" id="scenes"
+            style="--section-image: url('assets/scenes-bg.jpg')">
+            <div class="section-title reveal">
+                <p class="eyebrow">Gameplay scenes</p>
+                <h2>Реальные кадры игр в движении лендинга</h2>
+            </div>
+
+            <div class="scene-stack">
+                <article class="scene-frame reveal" style="--scene-image: url('assets/cs2-scene.jpg')">
+                    <div class="scene-media" aria-hidden="true"></div>
+                    <div class="scene-copy">
+                        <span>Counter-Strike 2</span>
+                        <h3>Раунд на тонком тайминге</h3>
+                        <p>Кадр появляется из затемнения, а легкий зум создает эффект включенной трансляции.</p>
+                    </div>
+                </article>
+
+                <article class="scene-frame reveal" style="--scene-image: url('assets/dota2-scene.jpg')">
+                    <div class="scene-media" aria-hidden="true"></div>
+                    <div class="scene-copy">
+                        <span>Dota 2</span>
+                        <h3>Командный файт у Рошана</h3>
+                        <p>Большой игровой кадр держит атмосферу турнира лучше любой абстрактной графики.</p>
+                    </div>
+                </article>
+
+                <article class="scene-frame reveal" style="--scene-image: url('assets/fc24-scene.jpg')">
+                    <div class="scene-media" aria-hidden="true"></div>
+                    <div class="scene-copy">
+                        <span>FC 24</span>
+                        <h3>Атака на последних минутах</h3>
+                        <p>Плавный вход и кинематографичный кроп делают спортивную сцену частью промо.</p>
+                    </div>
+                </article>
+
+                <article class="scene-frame reveal" style="--scene-image: url('assets/ufc5-scene.jpg')">
+                    <div class="scene-media" aria-hidden="true"></div>
+                    <div class="scene-copy">
+                        <span>UFC 5</span>
+                        <h3>Момент нокаута</h3>
+                        <p>Контрастный кадр, HUD-линии и неоновые акценты поддерживают общий стиль страницы.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="section prizes section-bg" id="prizes" style="--section-image: url('assets/prizes-bg.jpg')">
+            <div class="section-title reveal">
+                <p class="eyebrow">Призовой фонд</p>
+                <h2>2 000 000 ₽ для сильнейших</h2>
+            </div>
+
+            <div class="prize-grid">
+                <article class="prize-card reveal">
+                    <span>01</span>
+                    <h3>1 место</h3>
+                    <b>1 000 000 ₽</b>
+                </article>
+                <article class="prize-card reveal champion">
+                    <span>Grand Final</span>
+                    <h3>MVP турнира</h3>
+                    <b>150 000 ₽</b>
+                </article>
+                <article class="prize-card reveal">
+                    <span>02</span>
+                    <h3>2 место</h3>
+                    <b>600 000 ₽</b>
+                </article>
+                <article class="prize-card reveal">
+                    <span>03</span>
+                    <h3>3 место</h3>
+                    <b>400 000 ₽</b>
+                </article>
+            </div>
+        </section>
+
+        <section class="section schedule section-bg" id="schedule"
+            style="--section-image: url('assets/schedule-bg.jpg')">
+            <div class="section-title reveal">
+                <p class="eyebrow">Таймлайн</p>
+                <h2>Путь от регистрации до гранд-финала</h2>
+            </div>
+
+            <div class="timeline">
+                <div class="timeline-item reveal">
+                    <time>1 августа</time>
+                    <h3>Старт регистрации</h3>
+                    <p>Команды отправляют заявки и выбирают дисциплину.</p>
+                </div>
+                <div class="timeline-item reveal">
+                    <time>5-12 сентября</time>
+                    <h3>Онлайн-квалификации</h3>
+                    <p>Отборочные матчи, рейтинги и формирование финальной сетки.</p>
+                </div>
+                <div class="timeline-item reveal">
+                    <time>18-20 сентября</time>
+                    <h3>Финальный уикенд</h3>
+                    <p>LAN-матчи, трансляции, шоу-ивенты и награждение чемпионов.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section registration section-bg" id="form"
+            style="--section-image: url('assets/registration-bg.jpg')">
+            <div class="form-panel reveal">
+                <div>
+                    <p class="eyebrow">Заявка на участие</p>
+                    <h2>Забронируй слот до закрытия регистрации</h2>
+                    <p>
+                        Оставь контакты команды. Менеджер турнира пришлет правила,
+                        расписание квалификаций и ссылку на капитанский чат.
+                    </p>
+                </div>
+
+                <form id="regForm">
+                    <label>
+                        <span>Команда или ник</span>
+                        <input type="text" placeholder="Например: Neon Rush" required />
+                    </label>
+                    <label>
+                        <span>Email капитана</span>
+                        <input type="email" placeholder="captain@example.com" required />
+                    </label>
+                    <label>
+                        <span>Дисциплина</span>
+                        <select required>
+                            <option value="">Выберите игру</option>
+                            <option>CS2</option>
+                            <option>Dota 2</option>
+                            <option>FC 24</option>
+                            <option>UFC 5</option>
+                        </select>
+                    </label>
+                    <button class="btn primary" type="submit">Отправить заявку</button>
+                    <p id="success" class="success" role="status">Заявка принята. Увидимся на арене!</p>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <span>Cyber Arena Championship © 2026</span>
+        <a href="#top">Наверх</a>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
