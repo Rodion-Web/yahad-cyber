@@ -4,6 +4,9 @@ const countdownNodes = countdownIds.map((id) => document.getElementById(id));
 const cursorGlow = document.querySelector(".cursor-glow");
 const regForm = document.getElementById("regForm");
 const successMessage = document.getElementById("success");
+const nav = document.querySelector(".nav");
+const menuToggle = document.querySelector(".menu-toggle");
+const navLinks = document.querySelector(".nav-links");
 
 function scrollToForm() {
     document.getElementById("form").scrollIntoView({
@@ -22,6 +25,15 @@ function updateCountdown() {
     [days, hours, minutes, seconds].forEach((value, index) => {
         countdownNodes[index].textContent = String(value).padStart(2, "0");
     });
+}
+
+function updateNavState() {
+    nav.classList.toggle("scrolled", window.scrollY > 24);
+}
+
+function closeMenu() {
+    nav.classList.remove("menu-open");
+    menuToggle.setAttribute("aria-expanded", "false");
 }
 
 const revealObserver = new IntersectionObserver(
@@ -45,6 +57,27 @@ document.addEventListener("pointermove", (event) => {
     cursorGlow.style.setProperty("--y", `${event.clientY}px`);
 });
 
+menuToggle.addEventListener("click", () => {
+    const isOpen = nav.classList.toggle("menu-open");
+    menuToggle.setAttribute("aria-expanded", String(isOpen));
+});
+
+navLinks.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", closeMenu);
+});
+
+window.addEventListener("resize", () => {
+    if (window.innerWidth > 920) {
+        closeMenu();
+    }
+});
+
+document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+        closeMenu();
+    }
+});
+
 regForm.addEventListener("submit", (event) => {
     event.preventDefault();
     successMessage.classList.add("visible");
@@ -55,5 +88,7 @@ regForm.addEventListener("submit", (event) => {
     }, 4000);
 });
 
+window.addEventListener("scroll", updateNavState, { passive: true });
+updateNavState();
 updateCountdown();
 window.setInterval(updateCountdown, 1000);
