@@ -324,6 +324,7 @@ h3 {
 }
 
 .countdown,
+.hero-stats-wrap,
 .hero-stats,
 .game-grid,
 .prize-grid,
@@ -331,6 +332,15 @@ h3 {
 .form-panel {
     position: relative;
     z-index: 1;
+}
+
+.hero-block-title {
+    margin: 0 0 12px;
+    color: var(--text);
+    font-size: 14px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
 }
 
 .countdown {
@@ -373,6 +383,10 @@ h3 {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 12px;
+    max-width: 760px;
+}
+
+.hero-stats-wrap {
     max-width: 760px;
 }
 
@@ -1484,12 +1498,60 @@ footer a {
         font-size: 44px;
     }
 
-    .countdown,
-    .hero-stats,
     .game-grid,
     .prize-grid,
     .timeline {
         grid-template-columns: 1fr;
+    }
+
+    .hero-block-title {
+        margin-bottom: 8px;
+        font-size: 11px;
+        letter-spacing: 0.08em;
+    }
+
+    .countdown {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 6px;
+        width: 100%;
+    }
+
+    .countdown div {
+        min-width: 0;
+        padding: 10px 6px;
+        text-align: center;
+    }
+
+    .countdown strong {
+        font-size: clamp(22px, 7vw, 30px);
+    }
+
+    .countdown span {
+        font-size: 10px;
+    }
+
+    .hero-stats-wrap {
+        width: 100%;
+    }
+
+    .hero-stats {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 6px;
+        max-width: none;
+    }
+
+    .hero-stats div {
+        min-height: 74px;
+        padding: 10px 8px;
+        text-align: center;
+    }
+
+    .hero-stats b {
+        font-size: clamp(22px, 7vw, 30px);
+    }
+
+    .hero-stats span {
+        font-size: 10px;
     }
 
     .prize-card.champion {
